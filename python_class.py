@@ -74,6 +74,8 @@ class LinkedList:
 		else: 
 			newNode.next=self.getNode(insert_index)
 			self.getNode(insert_index-1).next=newNode
-			
+	
+	def print_str(self,num): 
+		print 'zhaopp,'+'huai,'*num
 		
 	
