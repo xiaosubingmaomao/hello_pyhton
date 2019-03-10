@@ -12,7 +12,7 @@ def initLinkedList(length):
 	
 linkedList=initLinkedList(10)
 
-print linkedList,linkedList.length
+print (linkedList,linkedList.length)
 
 def insertSort1(linkedList):
 	for i in range(1,linkedList.length):
@@ -89,9 +89,9 @@ def insertSort4_1(linkedList):
 	
 sort_list=insertSort1(linkedList)
 
-print sort_list
+print (sort_list)
 
-print sort_list.head
+print (sort_list.head)
 
 #print Node(4,None).value
 
