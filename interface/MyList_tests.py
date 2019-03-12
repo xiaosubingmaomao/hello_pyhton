@@ -1,6 +1,7 @@
 from MyList import MyList
 from MyLinkedList import MyLinkedList
 from MyArrayList import MyArrayList
+from MyDoublyLinkedList import DoublyLinkedList
 
 class MyListTest:
     
@@ -55,8 +56,7 @@ class MyListTest:
         self.list.appendValue(2)
         print ('original list :', self.list)
         print ('at index %s insert value %s ,the list is %s' %(2,200 ,self.list.insertValue(2,200)))
-        
-    
+            
     def TestAll(self):
         self.getLenTest()
         print ('')
@@ -64,9 +64,9 @@ class MyListTest:
         print ('')
         self.getValueTest()
         print ('')
-        self.removeIndexTest()
-        print ('')
         self.appendValueTest()
+        print ('')
+        #self.removeIndexTest()
         print ('')
         self.insertValueTest()
         
@@ -76,4 +76,7 @@ test.TestAll()
 
 print ('-----array list-------')
 test = MyListTest(MyArrayList(0))
+test.TestAll()
+print ('-----doubly list-------')
+test = MyListTest(DoublyLinkedList(0))
 test.TestAll()
