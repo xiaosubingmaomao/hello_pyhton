@@ -1,35 +1,30 @@
 
+##bubble sort
 def bubbleSort(nums):
-    lenNums=len(nums)
-    if lenNums==0:
-        return nums
-    for i in range(lenNums-1):
-        if nums[i]>nums[i+1]:
-            tmp=nums[i+1]
-            nums[i+1]=nums[i]
-            nums[i]=tmp
-    lenNums -=1
-    nums[0:lenNums]=bubbleSort(nums[0:lenNums])   ###???
-    return nums
+    for i in range(len(nums),1,-1):
+        for j in range(i-1):
+           if nums[j] > nums[j+1] :
+               nums[j],nums[j+1]=nums[j+1],nums[j]
+                             
+##select sort
+def selectSort(nums): 
+    for i in range(len(nums),1,-1):     
+        for j in range(i-1):
+            if nums[j] > nums[i-1] :
+                nums[j],nums[i-1]=nums[i-1],nums[j]
+                
 
-def selectSort(nums):
-    lenNums=len(nums)
-    if lenNums==0:
-        return nums
-    max=nums[0]
-    for i in range(1,lenNums-1):
-        if nums[i]>max:
-            max=nums[i]
-            nums.remove(max)
-            nums.append(max)
-    lenNums -=1
-    nums[0:lenNums]=bubbleSort(nums[0:lenNums])   ###???
-    return nums
+def insertSort(nums):
+    for i in range(1,len(nums)):
+        for j in range(i):
+            if nums[i] < nums[j] :
+                nums[0:i+1]=nums[0:j] + [nums[i]] + nums[j:i]
+
+nums=[4,8,2,3,1,0]
+insertSort(nums)
+print (nums)
+              
 
 
-
-nums=[]
-
-print (selectSort(nums))
 
 
