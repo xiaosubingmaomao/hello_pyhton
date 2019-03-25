@@ -1,5 +1,5 @@
 
-from MyList import *
+from .MyList import *
 
 class Node:
 

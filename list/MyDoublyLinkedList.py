@@ -1,4 +1,4 @@
-from MyList import *
+from .MyList import *
 
 class DoublyNode:
     def __init__(self,value,prev,next):

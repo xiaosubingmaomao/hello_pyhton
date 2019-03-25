@@ -1,5 +1,5 @@
-
-from MyList import *
+print (__name__)
+from .MyList import *
 
 class MyArrayList(MyList):  ## inherit
 
